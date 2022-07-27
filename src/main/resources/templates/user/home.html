@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Inicio Usuario</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+"
+	integrity="sha384-
+ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="#">Usuarios</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" th:href="@{/logout}">Cerrar</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="container mt-5">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<form th:action="@{/users}" method="post" th:object="${detalle}">
+				<div class="form-group">
+					<input type="text" th:field="*{clave}" class="form-control"
+						id="clave" aria-describedby="claveHelp"
+						placeholder="Ingresa nombre de la clave"> <small
+						id="inClave" class="form-text text-muted">Nombre de la
+						clave que se almacenará en sesión.</small>
+				</div>
+				<div class="form-group">
+					<input type="text" th:field="*{valor}" class="form-control"
+						id="valor" aria-describedby="valorHelp"
+						placeholder="Ingresa el contenido"> <small id="inValor"
+						class="form-text text-muted">Contenido de la clave que se
+						almacenará en sesión.</small>
+				</div>
+				<button type="submit" class="btn btn-primary">Agregar</button>
+			</form>
+		</div>
+		<div class="col-sm-4"></div>
+		<div class="col-sm-12 mt-5">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">clave</th>
+						<th scope="col">valor</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="detalle: ${valores}">
+						<td th:text="${detalle.clave}" />
+						<td th:text="${detalle.valor}" />
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
