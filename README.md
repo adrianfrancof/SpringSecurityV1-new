@@ -1,6 +1,6 @@
 # Título del Proyecto
 
-_Spring Security_
+_Spring Security realizando seguridad con usuarios en memoria_
 
 ## Comenzando 🚀
 
@@ -11,7 +11,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Que necesitas para instalar el software y como instalarlas_
 
 ```
 IDE Eclipse, Spring Tool Suite
@@ -56,7 +56,7 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 ## Contribuyendo 🖇️
 
-Por favor lee el [CONTRIBUTING.md](https://github.com/adrianfrancof/SpringSecurityV2-new.git) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+Por favor lee el [CONTRIBUTING.md](https://github.com/adrianfrancof/SpringSecurityV1-new.git) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
 ## Versionado 📌
 
