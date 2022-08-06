@@ -4,11 +4,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 public class WebSecurityConfig {
@@ -51,6 +53,17 @@ public class WebSecurityConfig {
 		.and()
 		.exceptionHandling()//si ocurre un error de ingreso se ejecuta la pagina de recurso-prohibido
 		.accessDeniedPage("/recurso-prohibido");
+		
+		http
+		.logout()
+        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+        .logoutSuccessUrl("/login")
+        .deleteCookies("JSESSIONID")
+        .invalidateHttpSession(true);
+				
+		http.sessionManagement()
+        .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
+        .invalidSessionUrl("/login");
 		
 		return http.build();
 	}
