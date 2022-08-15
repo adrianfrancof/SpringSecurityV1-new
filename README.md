@@ -54,7 +54,7 @@ Realizar un fork o clon del proyecto, importar al IDE de preferencia, para ejecu
 
 ## Contribuyendo 🖇️
 
-Por favor lee el [CONTRIBUTING.md](https://github.com/adrianfrancof/SpringSecurityV1-new.git) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+Por favor lee el [CONTRIBUTING.md](https://github.com/adrianfrancof/SpringSecurityV1-new.git) para detalles de código de conducta, y el proceso para enviar pull requests.
 
 ## Versionado 📌
 
