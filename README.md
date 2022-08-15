@@ -64,6 +64,6 @@ https://github.com/adrianfrancof
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia [MIT license](https://choosealicense.com/licenses/mit/).
+Este proyecto está bajo la Licencia [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/).
 
 Este proyecto está bajo la Licencia - mira el archivo [LICENSE.md](LICENSE.md) para detalles
